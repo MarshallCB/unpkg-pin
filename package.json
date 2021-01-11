@@ -1,0 +1,68 @@
+{
+  "version": "0.0.1",
+  "name": "npkg-pin",
+  "repository": "MarshallCB/unpkg-pin",
+  "description": "Convert NPM imports into UNPKG Pinned URL's",
+  "keywords": [
+    "unpkg",
+    "cdn",
+    "pinned",
+    "performance",
+    "npm"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Marshall Brandt",
+    "email": "hey@m4r.sh",
+    "url": "https://m4r.sh"
+  },
+  "module": "dist/browser.mjs",
+  "main": "dist/index.js",
+  "unpkg": "dist/browser.min.js",
+  "browser": "dist/browser.mjs",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/browser.mjs",
+      "browser": "./dist/browser.mjs",
+      "require": "./dist/index.js"
+    },
+    "./node": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./browser": {
+      "import": "./dist/browser.mjs",
+      "require": "./dist/browser.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node -r esm test"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "esm": "^3.2.25",
+    "rollup": "^2.33.3",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "uvu": "^0.4.1"
+  },
+  "dependencies": {
+    "escalade": "^3.1.1",
+    "follow-redirects": "^1.13.1",
+    "resolve-cwd": "^3.0.0",
+    "umap": "^1.0.2"
+  }
+}
