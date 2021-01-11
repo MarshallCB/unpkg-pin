@@ -45,7 +45,7 @@ await unpkg('hueman@2.0.0')
 
 ```
 
-**Browser** [Codepen](https://codepen.io/marshallcb/pen/qBaaJRY?editors=0011)
+**Browser** [Codepen](https://codepen.io/marshallcb/pen/QWKVYWg?editors=0010)
 ```js
 import { unpkg } from 'https://unpkg.com/unpkg-pin?module'
 
