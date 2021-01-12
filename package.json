@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "name": "npkg-pin",
+  "name": "unpkg-pin",
   "repository": "MarshallCB/unpkg-pin",
   "description": "Convert NPM imports into UNPKG Pinned URL's",
   "keywords": [
